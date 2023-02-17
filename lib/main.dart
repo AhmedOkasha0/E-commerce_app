@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: Splash_screen.routeName,
       theme: ThemeScreen.lightTheme,
       // theme
+      //th
     );
   }
 }
