@@ -23,6 +23,7 @@ class CustomFormField extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(bottom: 12),
       child: TextFormField(
+
         validator: validator,
         controller: controller,
         keyboardType: keyboardType,
