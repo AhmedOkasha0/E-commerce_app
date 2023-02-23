@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         RegisterScreen.routeName: (context) => RegisterScreen(),
         Splashscreen.routeName: (context) => Splashscreen(),
       },
-      initialRoute: Splashscreen.routeName,
+      initialRoute: LoginScreen.routeName,
       theme: ThemeScreen.lightTheme,
       // theme
       //th

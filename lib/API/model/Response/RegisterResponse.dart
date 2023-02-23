@@ -36,4 +36,11 @@ class RegisterResponse {
     map['token'] = token;
     return map;
   }
+  String mergeErrors(){
+    String message='';
+    errors?.forEach((error){
+      message += '${error.msg??''}\n';
+      });
+    return message;
+        }
 }

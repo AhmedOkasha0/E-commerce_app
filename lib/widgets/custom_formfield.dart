@@ -21,13 +21,12 @@ class CustomFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 12),
+      margin: EdgeInsets.only(bottom: 20),
       child: TextFormField(
-
         validator: validator,
         controller: controller,
         keyboardType: keyboardType,
-        obscureText: true,
+        obscureText: false,
         decoration: InputDecoration(
           hintText: hint,
           fillColor: Colors.white,
