@@ -21,34 +21,34 @@ class DialogUtils{
     Navigator.of(context).pop();
   }
 
-  // static void showMessage(BuildContext context, String message, String posActionText,
-  //     Function posAction, {String? negActionText, Function? negAction}) {
-  //   showDialog(
-  //       context: context,
-  //       builder: (context) {
-  //         return AlertDialog(
-  //           content: Text(message),
-  //           actions: [
-  //             TextButton(
-  //                 onPressed: () {
-  //                   posAction();
-  //                 },
-  //                 child: Text(posActionText))
-  //           ],
-  //         );
-  //       });
-  // }
-static void showMessage(context,String message ,Function posAction,String posActionText){
-    showDialog(context: context, builder: (context){
-      return AlertDialog(
-        content: Text(message),
-        actions: [
-          TextButton(onPressed: (){}, child: Text(posActionText))
-        ],
-      );
-    });
-
-}
+  static void showMessage(BuildContext context, String message, String posActionText,
+      Function posAction, {String? negActionText, Function? negAction}) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Text(message),
+            actions: [
+              TextButton(
+                  onPressed: () {
+                    posAction();
+                  },
+                  child: Text(posActionText))
+            ],
+          );
+        });
+  }
+// static void showMessage(context,String message ,Function posAction,String posActionText){
+//     showDialog(context: context, builder: (context){
+//       return AlertDialog(
+//         content: Text(message),
+//         actions: [
+//           TextButton(onPressed: (){}, child: Text(posActionText))
+//         ],
+//       );
+//     });
+//
+// }
 
 }
 
