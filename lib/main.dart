@@ -1,5 +1,6 @@
-import 'package:ecommerec_app/themes/theme_screen.dart';
-import 'package:ecommerec_app/ui/login/login.dart';
+import 'package:ecommerec_app/config/themes/theme_screen.dart';
+import 'package:ecommerec_app/ui/login/login_view.dart';
+import 'package:ecommerec_app/ui/main/main_screen.dart';
 import 'package:ecommerec_app/ui/register/register_screen.dart';
 import 'package:ecommerec_app/ui/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,10 @@ class MyApp extends StatelessWidget {
         LoginScreen.routeName: (context) => LoginScreen(),
         RegisterScreen.routeName: (context) => RegisterScreen(),
         Splashscreen.routeName: (context) => Splashscreen(),
+        MainScreen.routeName: (context) => MainScreen(),
       },
       initialRoute: LoginScreen.routeName,
-      theme: ThemeScreen.lightTheme,
+      theme: appTheme(),
       // theme
       //th
     );

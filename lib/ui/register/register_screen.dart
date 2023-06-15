@@ -1,5 +1,6 @@
-import 'package:ecommerec_app/themes/theme_screen.dart';
-import 'package:ecommerec_app/ui/login/login.dart';
+import 'package:ecommerec_app/config/themes/theme_screen.dart';
+import 'package:ecommerec_app/core/utils/app_color.dart';
+import 'package:ecommerec_app/ui/login/login_view.dart';
 import 'package:ecommerec_app/ui/register/register_model.dart';
 import 'package:ecommerec_app/ui/register/register_view_model.dart';
 import 'package:ecommerec_app/ui/utils.dart';
@@ -32,7 +33,6 @@ class _RegisterScreenState extends State<RegisterScreen>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     viewModel.navigator = this;
   }
@@ -45,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen>
         appBar: AppBar(
           elevation: 0,
         ),
-        backgroundColor: ThemeScreen.primeColor,
+        backgroundColor: AppColor.primaryColor,
         body: Padding(
           padding: const EdgeInsets.all(12.0),
           child: SingleChildScrollView(
@@ -131,13 +131,13 @@ class _RegisterScreenState extends State<RegisterScreen>
                     child: Text(
                       'sign up',
                       style: TextStyle(
-                          color: ThemeScreen.primeColor, fontSize: 20),
+                          color: AppColor.primaryColor, fontSize: 20),
                     ),
                     style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(vertical: 23),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
-                        backgroundColor: ThemeScreen.white),
+                        backgroundColor: AppColor.white),
                   )
                 ],
               ),

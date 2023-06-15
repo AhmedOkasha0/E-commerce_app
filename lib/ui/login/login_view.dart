@@ -1,5 +1,6 @@
-import 'package:ecommerec_app/themes/theme_screen.dart';
-import 'package:ecommerec_app/ui/home/home_view.dart';
+import 'package:ecommerec_app/config/themes/theme_screen.dart';
+import 'package:ecommerec_app/core/utils/app_color.dart';
+import 'package:ecommerec_app/ui/main/main_screen.dart';
 import 'package:ecommerec_app/ui/login/login_model.dart';
 import 'package:ecommerec_app/ui/login/login_view_model.dart';
 import 'package:ecommerec_app/ui/register/register_screen.dart';
@@ -38,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> implements LoginNavigator {
         appBar: AppBar(
           elevation: 0,
         ),
-        backgroundColor: ThemeScreen.primeColor,
+        backgroundColor: AppColor.primaryColor,
         body: Padding(
           padding: const EdgeInsets.all(8),
           child: SingleChildScrollView(
@@ -52,14 +53,14 @@ class _LoginScreenState extends State<LoginScreen> implements LoginNavigator {
                   Text(
                     'Welcome Backe To Route ',
                     style: TextStyle(
-                      color: ThemeScreen.white,
+                      color: AppColor.white,
                       fontSize: 24,
                     ),
                   ),
                   Text(
                     'please sign in with your mail',
                     style: TextStyle(
-                      color: ThemeScreen.white,
+                      color: AppColor.white,
                       fontSize: 16,
                     ),
                   ),
@@ -100,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> implements LoginNavigator {
                     'forget password',
                     textAlign: TextAlign.end,
                     style: TextStyle(
-                      color: ThemeScreen.white,
+                      color: AppColor.white,
                       fontSize: 18,
                     ),
                   ),
@@ -111,14 +112,14 @@ class _LoginScreenState extends State<LoginScreen> implements LoginNavigator {
                     onPressed: login,
                     child: Text(
                       'Login',
-                      style: TextStyle(
-                          color: ThemeScreen.primeColor, fontSize: 20),
+                      style:
+                          TextStyle(color: AppColor.primaryColor, fontSize: 20),
                     ),
                     style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(vertical: 23),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
-                        backgroundColor: ThemeScreen.white),
+                        backgroundColor: AppColor.white),
                   ),
                   SizedBox(
                     height: 24,
@@ -137,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> implements LoginNavigator {
                         'Don`t have an account? Create Account',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: ThemeScreen.white,
+                          color: AppColor.white,
                           fontSize: 18,
                         ),
                       ),
@@ -162,7 +163,6 @@ class _LoginScreenState extends State<LoginScreen> implements LoginNavigator {
   @override
   void hideDialog() {
     DialogUtils.hideLoading(context);
-    // TODO: implement hideDialog
   }
 
   @override
@@ -172,19 +172,18 @@ class _LoginScreenState extends State<LoginScreen> implements LoginNavigator {
       String? negActionTitle,
       VoidCallback? negAction,
       bool isDismissible = true}) {
-    DialogUtils.showMessage(context, message, () {}, 'ok');
-    // TODO: implement showMessage
+    DialogUtils.showMessage(context, message, () {
+      Navigator.pop(context);
+    }, 'ok');
   }
 
   @override
   void showProgressDialog(String loadingMessage) {
     DialogUtils.showLoading(context);
-    // TODO: implement showProgressDialog
   }
 
   @override
   void navigateToHome() {
-    Navigator.pushReplacementNamed(context, HomeScreen.routeName);
-    // TODO: implement navigateToHome
+    Navigator.pushReplacementNamed(context, MainScreen.routeName);
   }
 }
