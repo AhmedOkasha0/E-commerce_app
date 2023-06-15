@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         Splashscreen.routeName: (context) => Splashscreen(),
         MainScreen.routeName: (context) => MainScreen(),
       },
-      initialRoute: LoginScreen.routeName,
+      initialRoute: MainScreen.routeName,
       theme: appTheme(),
       // theme
       //th

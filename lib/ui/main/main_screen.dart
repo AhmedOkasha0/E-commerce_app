@@ -20,34 +20,35 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          selectedItemColor: AppColor.primaryColor,
-          unselectedItemColor: AppColor.grey,
-          currentIndex: selectedIndex,
-          onTap: (index) {
-            selectedIndex = index;
-            setState(() {});
-          },
-          items: const [
-            BottomNavigationBarItem(
-              label: 'Home',
-              icon: ImageIcon(
-                AssetImage(ImagePath.home),
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(color: AppColor.primaryColor),
+          child: BottomNavigationBar(
+            currentIndex: selectedIndex,
+            onTap: (index) {
+              selectedIndex = index;
+              setState(() {});
+            },
+            items: const [
+              BottomNavigationBarItem(
+                label: 'Home',
+                icon: ImageIcon(
+                  AssetImage(ImagePath.home),
+                ),
               ),
-            ),
-            BottomNavigationBarItem(
-              label: 'Category',
-              icon: ImageIcon(
-                AssetImage(ImagePath.category),
+              BottomNavigationBarItem(
+                label: 'Category',
+                icon: ImageIcon(
+                  AssetImage(ImagePath.category),
+                ),
               ),
-            ),
-            BottomNavigationBarItem(
-                label: 'favorite',
-                icon: ImageIcon(AssetImage(ImagePath.favorite))),
-            BottomNavigationBarItem(
-                label: 'profile',
-                icon: ImageIcon(AssetImage(ImagePath.profile)))
-          ],
+              BottomNavigationBarItem(
+                  label: 'favorite',
+                  icon: ImageIcon(AssetImage(ImagePath.favorite))),
+              BottomNavigationBarItem(
+                  label: 'profile',
+                  icon: ImageIcon(AssetImage(ImagePath.profile)))
+            ],
+          ),
         ),
         body: Tabs[selectedIndex],
       ),
