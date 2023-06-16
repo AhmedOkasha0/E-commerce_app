@@ -3,6 +3,7 @@ import 'package:ecommerec_app/core/utils/app_color.dart';
 import 'package:ecommerec_app/core/utils/app_strings.dart';
 import 'package:ecommerec_app/core/utils/constants.dart';
 import 'package:ecommerec_app/core/utils/media_query.dart';
+import 'package:ecommerec_app/ui/home/widget/carousel_slider.dart';
 import 'package:ecommerec_app/ui/home/widget/text_form.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,11 @@ class HomeScreen extends StatelessWidget {
               SizedBox(width: context.width * 0.78, child: CustomTextForm()),
               IconButton(onPressed: () {}, icon: (Image.asset(ImagePath.cart))),
             ],
-          )
+          ),
+          SizedBox(
+            height: context.height * 0.02,
+          ),
+           CustomCarosel(),
         ],
       )),
     );
